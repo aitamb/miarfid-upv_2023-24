@@ -1,0 +1,11 @@
+Model Information:
+* title:	Red Plush Theater Chair
+* source:	https://sketchfab.com/3d-models/red-plush-theater-chair-f24edbf3094b47e29257e6a498249a1c
+* author:	Connections XR (https://sketchfab.com/connectionsxr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Red Plush Theater Chair" (https://sketchfab.com/3d-models/red-plush-theater-chair-f24edbf3094b47e29257e6a498249a1c) by Connections XR (https://sketchfab.com/connectionsxr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
