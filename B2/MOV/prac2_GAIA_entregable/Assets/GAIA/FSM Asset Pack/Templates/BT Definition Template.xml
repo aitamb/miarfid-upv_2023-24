@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<BT>
+	<BTid> <!--ID OF THE BT HERE--></BTid>
+	<Bt>
+		<Trees>
+      <Tree Root="YES"><!--ROOT ATTRIBUTE DETERMINES WHETHER THIS TREE IS THE ROOT OF THE BT OR NOT-->
+				<Name><!--NAME OF THE TREE HERE--></Name>
+        <Child_Nodes>
+					<CN>
+						<CN_Type><!--EITHER TREE OR NODE--></CN_Type>
+            <CN_Name><!--CONTENTS MAY BE EITHER THE TYPE OF NODE OR THE NAME OF A CONDITION OR ACTION--></CN_Name>
+            <!--SUBCHILDS ARE DEFINED IN THE ELEMENT BELOW, JUST LIKE CHILD NODES-->
+            <Child_Nodes>
+							<CN>
+                <CN_Type>tree</CN_Type>
+                <CN_Name>Movement</CN_Name>
+							</CN>
+              <CN>
+                <CN_Type>tree</CN_Type>
+                <CN_Name>Aiming</CN_Name>
+              </CN>
+            </Child_Nodes>
+					</CN>
+        </Child_Nodes>
+			</Tree>
+      
+      <Tree Root="NO">
+        <Name>Movement</Name>
+        <Child_Nodes>
+          <CN>
+            <CN_Type>node</CN_Type>
+            <CN_Name>fallback</CN_Name>
+            <Child_Nodes>
+              <CN>
+                <CN_Type>node</CN_Type>
+                <CN_Name>sequence</CN_Name>
+                <!--SUBCHILDS CAN ALSO HAVE INFINITE CHILDS-->
+                <Child_Nodes>
+                  <CN>
+                    <CN_Type>node</CN_Type>
+                    <CN_Name>tooFar</CN_Name>
+                  </CN>
+                  <CN>
+                    <CN_Type>node</CN_Type>
+                    <CN_Name>Move</CN_Name>
+                  </CN>
+                </Child_Nodes>
+              </CN>
+              <CN>
+                <CN_Type>node</CN_Type>
+                <CN_Name>sequence</CN_Name>
+                <Child_Nodes>
+                  <CN>
+                    <CN_Type>node</CN_Type>
+                    <CN_Name>tooClose</CN_Name>
+                  </CN>
+                  <CN>
+                    <CN_Type>node</CN_Type>
+                    <CN_Name>MoveBack</CN_Name>
+                  </CN>
+                </Child_Nodes>
+              </CN>
+              <CN>
+                <CN_Type>node</CN_Type>
+                <CN_Name>isStopped</CN_Name>
+              </CN>
+            </Child_Nodes>
+          </CN>
+        </Child_Nodes>
+      </Tree>
+		</Trees>
+	</Bt>
+</BT>

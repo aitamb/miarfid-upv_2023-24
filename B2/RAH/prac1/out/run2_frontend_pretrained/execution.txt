@@ -1,0 +1,136 @@
+Part 1: Load wavlm model ##############################################
+Some weights of WavLMModel were not initialized from the model checkpoint at patrickvonplaten/wavlm-libri-clean-100h-base-plus and are newly initialized: ['wavlm.encoder.pos_conv_embed.conv.parametrizations.weight.original0', 'wavlm.encoder.pos_conv_embed.conv.parametrizations.weight.original1']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+WavLMFeatureEncoder(
+  (conv_layers): ModuleList(
+    (0): WavLMGroupNormConvLayer(
+      (conv): Conv1d(1, 512, kernel_size=(10,), stride=(5,), bias=False)
+      (activation): GELUActivation()
+      (layer_norm): GroupNorm(512, 512, eps=1e-05, affine=True)
+    )
+    (1-4): 4 x WavLMNoLayerNormConvLayer(
+      (conv): Conv1d(512, 512, kernel_size=(3,), stride=(2,), bias=False)
+      (activation): GELUActivation()
+    )
+    (5-6): 2 x WavLMNoLayerNormConvLayer(
+      (conv): Conv1d(512, 512, kernel_size=(2,), stride=(2,), bias=False)
+      (activation): GELUActivation()
+    )
+  )
+)
+WavLMFeatureProjection(
+  (layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+  (projection): Linear(in_features=512, out_features=768, bias=True)
+  (dropout): Dropout(p=0.0, inplace=False)
+)
+WavLMEncoder(
+  (pos_conv_embed): WavLMPositionalConvEmbedding(
+    (conv): ParametrizedConv1d(
+      768, 768, kernel_size=(128,), stride=(1,), padding=(64,), groups=16
+      (parametrizations): ModuleDict(
+        (weight): ParametrizationList(
+          (0): _WeightNorm()
+        )
+      )
+    )
+    (padding): WavLMSamePadLayer()
+    (activation): GELUActivation()
+  )
+  (layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.0, inplace=False)
+  (layers): ModuleList(
+    (0): WavLMEncoderLayer(
+      (attention): WavLMAttention(
+        (k_proj): Linear(in_features=768, out_features=768, bias=True)
+        (v_proj): Linear(in_features=768, out_features=768, bias=True)
+        (q_proj): Linear(in_features=768, out_features=768, bias=True)
+        (out_proj): Linear(in_features=768, out_features=768, bias=True)
+        (gru_rel_pos_linear): Linear(in_features=64, out_features=8, bias=True)
+        (rel_attn_embed): Embedding(320, 12)
+      )
+      (dropout): Dropout(p=0.0, inplace=False)
+      (layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (feed_forward): WavLMFeedForward(
+        (intermediate_dropout): Dropout(p=0.0, inplace=False)
+        (intermediate_dense): Linear(in_features=768, out_features=3072, bias=True)
+        (intermediate_act_fn): GELUActivation()
+        (output_dense): Linear(in_features=3072, out_features=768, bias=True)
+        (output_dropout): Dropout(p=0.0, inplace=False)
+      )
+      (final_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+    (1-11): 11 x WavLMEncoderLayer(
+      (attention): WavLMAttention(
+        (k_proj): Linear(in_features=768, out_features=768, bias=True)
+        (v_proj): Linear(in_features=768, out_features=768, bias=True)
+        (q_proj): Linear(in_features=768, out_features=768, bias=True)
+        (out_proj): Linear(in_features=768, out_features=768, bias=True)
+        (gru_rel_pos_linear): Linear(in_features=64, out_features=8, bias=True)
+      )
+      (dropout): Dropout(p=0.0, inplace=False)
+      (layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (feed_forward): WavLMFeedForward(
+        (intermediate_dropout): Dropout(p=0.0, inplace=False)
+        (intermediate_dense): Linear(in_features=768, out_features=3072, bias=True)
+        (intermediate_act_fn): GELUActivation()
+        (output_dense): Linear(in_features=3072, out_features=768, bias=True)
+        (output_dropout): Dropout(p=0.0, inplace=False)
+      )
+      (final_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+)
+- Number of parameters: 94381936
+
+
+Part 2: Test feature extractor and model output (encoder) #############
+- Model feature extractor shape: torch.Size([1, 512, 49])
+- Model feature extractor: WavLMFeatureEncoder(
+  (conv_layers): ModuleList(
+    (0): WavLMGroupNormConvLayer(
+      (conv): Conv1d(1, 512, kernel_size=(10,), stride=(5,), bias=False)
+      (activation): GELUActivation()
+      (layer_norm): GroupNorm(512, 512, eps=1e-05, affine=True)
+    )
+    (1-4): 4 x WavLMNoLayerNormConvLayer(
+      (conv): Conv1d(512, 512, kernel_size=(3,), stride=(2,), bias=False)
+      (activation): GELUActivation()
+    )
+    (5-6): 2 x WavLMNoLayerNormConvLayer(
+      (conv): Conv1d(512, 512, kernel_size=(2,), stride=(2,), bias=False)
+      (activation): GELUActivation()
+    )
+  )
+)
+- Model output (encoder) shape: torch.Size([1, 49, 768])
+
+
+Part 3: Embeddings from feature extractor #############################
+
+
+-> Gender ---------------------------------
+- Embeddings shape: (200, 512) (300, 512)
+
+
+-> Speaker --------------------------------
+- Embeddings shape: (50, 512) (50, 512) (50, 512) (50, 512)
+
+
+-> Word -----------------------------------
+- Embeddings shape: (50, 512) (50, 512) (50, 512) (50, 512)
+(50, 512) (50, 512) (50, 512) (50, 512)
+
+
+Part 4: Embeddings from model output (encoder) ########################
+
+
+-> Gender ---------------------------------
+- Embeddings shape: (200, 768) (300, 768)
+
+
+-> Speaker --------------------------------
+- Embeddings shape: (50, 768) (50, 768) (50, 768) (50, 768)
+
+
+-> Word -----------------------------------
+- Embeddings shape: (50, 768) (50, 768) (50, 768) (50, 768)

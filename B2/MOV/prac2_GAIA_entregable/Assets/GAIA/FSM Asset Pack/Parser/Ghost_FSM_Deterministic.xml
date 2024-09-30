@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<FSM_Machine>
+	<FSMtype Probabilistic="NO">CLASSIC</FSMtype>
+	<FSMid>GhostRedFSM</FSMid>
+	<Fsm>
+		<Callback>BuscarEventos</Callback>
+		<!--ESTADOS ############################### -->
+		<States>
+			<State Initial="YES">
+				<S_Name>SCATTERING</S_Name>
+				<S_Action>SCATTER</S_Action>
+				<S_inAction>SCATTER</S_inAction>
+				<S_outAction>NULL</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+			<State Initial="NO">
+				<S_Name>CHASING</S_Name>
+				<S_Action>CHASE</S_Action>
+				<S_inAction>CHASE</S_inAction>
+				<S_outAction>NULL</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+			<State Initial="NO">
+				<S_Name>FRIGHTENING</S_Name>
+				<S_Action>SCATTER</S_Action>
+				<S_inAction>FRIGHTEN</S_inAction>
+				<S_outAction>NULL</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+			<State Initial="NO">
+				<S_Name>DYING</S_Name>
+				<S_Action>DIE</S_Action>
+				<S_inAction>NULL</S_inAction>
+				<S_outAction>NULL</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+		</States>
+		<!--TRANSICIONES ########################## -->
+		<Transitions>
+			<!--T.1 ############################### -->
+			<Transition>
+				<T_Name>SCATTERING_TO_CHASING</T_Name>
+				<T_Origin>SCATTERING</T_Origin>
+				<T_Destination>CHASING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>PACMAN_VISTO</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			<!--T.2 ############################### -->
+			<Transition>
+				<T_Name>CHASING_TO_SCATTERING</T_Name>
+				<T_Origin>CHASING</T_Origin>
+				<T_Destination>SCATTERING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>PACMAN_NO_VISTO</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			<!--T.3 ############################### -->
+			<Transition>
+				<T_Name>SCATTERING_TO_FRIGHTENING</T_Name>
+				<T_Origin>SCATTERING</T_Origin>
+				<T_Destination>FRIGHTENING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>POWER_PELLET_ON</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			<!--T.4 ############################### -->
+			<Transition>
+				<T_Name>CHASING_TO_FRIGHTENING</T_Name>
+				<T_Origin>CHASING</T_Origin>
+				<T_Destination>FRIGHTENING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>POWER_PELLET_ON</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			<!--T.5 ############################### -->
+			<Transition>
+				<T_Name>FRIGHTENING_TO_SCATTERING</T_Name>
+				<T_Origin>FRIGHTENING</T_Origin>
+				<T_Destination>SCATTERING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>POWER_PELLET_OFF</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			<!--T.6 ############################### -->
+			<Transition>
+				<T_Name>FRIGHTENING_TO_DYING</T_Name>
+				<T_Origin>FRIGHTENING</T_Origin>
+				<T_Destination>DYING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>GHOST_DEAD</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			<!--T.7 ############################### -->
+			<Transition>
+				<T_Name>DYING_TO_SCATTERING</T_Name>
+				<T_Origin>DYING</T_Origin>
+				<T_Destination>SCATTERING</T_Destination>
+				<T_Action>RESET</T_Action>
+				<Events>
+					<Event>
+						<ID>RESURRECT</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			<!--T.8 ############################### --><!--
+			<Transition>
+				<T_Name>CHASING_TO_EATING</T_Name>
+				<T_Origin>CHASING</T_Origin>
+				<T_Destination>EATING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>PACMAN_DEAD</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>
+			--><!--T.9 ############################### --><!--
+			<Transition>
+				<T_Name>EATING_TO_SCATTERING</T_Name>
+				<T_Origin>EATING</T_Origin>
+				<T_Destination>SCATTERING</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>PACMAN_DEAD</ID>
+						<Type>BASIC</Type>
+					</Event>
+				</Events>
+			</Transition>-->
+		</Transitions>
+	</Fsm>
+</FSM_Machine>

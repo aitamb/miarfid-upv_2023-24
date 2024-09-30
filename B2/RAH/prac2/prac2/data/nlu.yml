@@ -1,0 +1,253 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - hey robot
+    - hello robot
+    - hi robot
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see ya
+    - goodbye friend
+    - bye bye take care
+    - okay see you later
+    - bye for now
+    - bye for today
+    - bye bot
+    - goodbye bot
+    - goodnight
+    - goodnight bot
+    - see you later bot
+    - bye bot
+    - goodbye bot
+    - goodnight
+    - goodnight bot
+    - see you later bot
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - alright
+    - alright then
+    - sure
+    - sure thing
+    - OK
+    - great
+    - okay
+    - yes that sounds good
+    - yes, that sounds good
+    - yes, that is correct
+    - yes please
+    - yes, please
+    - yes, exactly
+    - yes exactly
+    - right
+    - perfect
+    - exactly
+    - that's right
+    - sounds good
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - no thank you
+    - no thanks
+    - nooo
+    - not at all
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - wonderful
+    - so wonderful
+    - very good
+    - wow
+    - yay
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - oh my god so sad
+    - so unhappy
+    - so unsatisfied
+    - not happy
+    - extremly unhappy
+    - so unhappy
+    - bad
+    - very bad
+    - awful
+    - terrible
+
+- intent: order_pizza
+  examples: |
+    - I want to order a pizza
+    - I want to eat
+    - I want food
+    - give me food
+    - I would like to order a pizza
+    - I would like a pizza
+    - I want pizza
+    - I am hungry
+    - I'm hungry
+    - I'm starving
+    - give me a pizza
+    - can I have a pizza
+    - I want a pizza
+    - I feel like eating pizza
+    - I want to eat pizza
+
+- intent: choose_topping
+  examples: |
+    - mushrooms
+    - pepperoni
+    - cheese
+    - ham
+    - bacon
+    - pineapple
+    - olives
+    - onions
+    - peppers
+    - sausage
+    - tomatoes
+    - chicken
+    - beef
+    - jalapenos
+    - spinach
+    - anchovies
+    - garlic
+    - artichokes
+    - eggplant
+    - broccoli
+    - feta
+    - pesto
+    - salami
+    - ricotta
+    - prosciutto
+    - goat cheese
+    - parmesan
+    - mozzarella
+    - cheddar
+    - gorgonzola
+    - asiago
+    - blue cheese
+    - brie
+    - fontina
+    - provolone
+    - swiss cheese
+    - gouda
+    - pecorino
+    - romano
+    - red onions
+    - green peppers
+    - black olives
+    - green olives
+    - banana peppers
+    - red peppers
+    - jalapeno peppers
+
+- intent: confirm_order
+  examples: |
+    - I'm okay with that
+    - I'm okay with this
+    - I'm okay with it
+    - I'm okay with the order
+    - I'm okay with the pizza
+    - I'm okay with the toppings
+    - I'm okay with the topping
+    - I'm done with the order
+    - I'm done with the pizza
+    - That's okay
+    - That's enough
+    - That's it
+    - That's all
+    - That's all I want
+    - That's all I need
+    - That's all I need for the pizza
+    - Okay, enough
+    - Okay, that's enough
+    - Okay, that's it
+    - I want to order this pizza
+    - I want to order this
+    - Confirm the order
+    - Confirm the pizza
+    - Confirm the toppings
+    - Done
+    - I'm done
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you?
+    - are you a real person?
+    - you're a bot?
+    - are you a bot
+    - are you a human
+    - am I talking to a bot

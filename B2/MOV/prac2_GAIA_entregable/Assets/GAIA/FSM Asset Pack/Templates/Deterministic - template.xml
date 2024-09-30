@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<FSM_Machine>
+	<!--FSM specification -->
+	<FSMtype Probabilistic="NO">CLASSIC</FSMtype> <!--Probabilistic has to be "NO" to be Deterministic --><!--TYPE can be CLASSIC, INERTIAL, STACK_BASED or CONCURRENT_STATES-->
+	<FSMid><!--put here the name of this machine--></FSMid>
+	<Fsm>
+		<Callback><!--put here the name of events routine--></Callback> <!--Method for events that concern to this FSM -->
+		<States>
+			<State Initial=""><!--Initial has to be "YES" or "NO" -->
+				<S_Name><!--Put here the name of this state (no quotes)--></S_Name>
+				<S_Action><!--Put here the name of this state action (no quotes, it can be NULL)--></S_Action>
+				<S_inAction><!--Put here the name of this state IN action (no quotes, it can be NULL) --></S_inAction>
+				<S_outAction><!--Put here the name of this state OUT action state (no quotes, it can be NULL) --></S_outAction>
+				<S_Fsm><!--Put here the PATH to a submachine (this could be empty) --></S_Fsm>
+			</State>
+			<!--ADD MORE STATES JUST LIKE THE FIRST -->
+		</States>
+		
+		<Transitions> 
+		  	<Transition>
+				<T_Name><!--Put here the name of this transition (no quotes)--></T_Name>
+				<T_Origin><!--Put here the name of the origin state (no quotes)--></T_Origin>
+				<T_Destination><!--Put here the name of destination state (no quotes)--></T_Destination>
+				<T_Action><!--Put here the name of this state (no quotes, it can be NULL)--></T_Action>
+				<Events><!--List of events that enable this Transition-->
+					<Event>
+						<ID><!--Put here the name of this Event (no quotes)--></ID> 
+						<Type><!--Put here the type of this Event (no quotes)--> </Type> <!--Type can be BASIC or STACKABLE-->
+					</Event>
+					<!--Add another <Event> if you want-->
+				</Events>	
+			</Transition>
+			<!--ADD MORE TRANSITIONS JUST LIKE THE FIRST-->
+		</Transitions>
+	</Fsm>
+</FSM_Machine>

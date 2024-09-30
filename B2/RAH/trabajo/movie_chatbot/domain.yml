@@ -1,0 +1,140 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - watch_movie
+  - genre_movie
+  - director_movie
+  - rating_movie
+  - year_movie
+
+entities:
+  - genre
+  - director
+  - rating
+  - year
+  - guided
+
+slots:
+  genre:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: genre
+  director:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: director
+  rating:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: rating
+  year:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: year
+  guided:
+    type: bool
+    influence_conversation: True
+    initial_value: False
+    mappings:
+    - type: from_entity
+      entity: guided
+
+responses:
+  utter_greet:
+  - text: "Hello, how can I help you?"
+  - text: "Hi there, how can I help you?"
+  - text: "Hey, i there anything I can do for you?"
+  
+  utter_ask_path:
+  - text: "Do you have any special preferences about the movie?"
+    buttons:
+    - title: "Yes, I do"
+      payload: '/affirm{{"guided": "True"}}'
+    - title: "No, you can decide"
+      payload: '/deny{{"guided": "False"}}'
+
+  utter_ask_genre:
+  - text: "What genre are you iterested in?"
+    buttons:
+    - title: "Adventure"
+      payload: '/genre_movie{{"genre": "Adventure"}}'
+    - title: "Biography"
+      payload: '/genre_movie{{"genre": "Biography"}}'
+    - title: "Comedy"
+      payload: '/genre_movie{{"genre": "Comedy"}}'
+    - title: "Drama"
+      payload: '/genre_movie{{"genre": "Drama"}}'
+    - title: "Horror"
+      payload: '/genre_movie{{"genre": "Horror"}}'
+    - title: "Musical"
+      payload: '/genre_movie{{"genre": "Musical"}}'
+    - title: "Romance"
+      payload: '/genre_movie{{"genre": "Romance"}}'
+    - title: "Sci-Fi"
+      payload: '/genre_movie{{"genre": "Sci-Fi"}}'
+    - title: "Thriller"
+      payload: '/genre_movie{{"genre": "Thriller"}}'
+    - title: "Western"
+      payload: '/genre_movie{{"genre": "Western"}}'
+  
+  utter_ask_year:
+  - text: "What year are you interested in?"
+    buttons:
+    - title: "1920-1950"
+      payload: '/year_movie{{"year": "1960"}}'
+    - title: "1960-1980"
+      payload: '/year_movie{{"year": "1990"}}'
+    - title: "1980-2000"
+      payload: '/year_movie{{"year": "2000"}}'
+    - title: "2000 onwards"
+      payload: '/year_movie{{"year": "2010"}}'
+
+  utter_ask_rating:
+  - text: "What rating do you want the movie to have?"
+    buttons:
+    - title: "7"
+      payload: '/rating_movie{{"rating": "7"}}'
+    - title: "8"
+      payload: '/rating_movie{{"rating": "8"}}'
+    - title: "9"
+      payload: '/rating_movie{{rating": "9"}}'
+    - title: "10"
+      payload: '/rating_movie{{"rating": "10"}}'
+
+  utter_cheer_up:
+  - text: "Maybe you can watch Shrek to cheer up!"
+    image: "https://e00-elmundo.uecdn.es/television/programacion-tv/img/v2/programas/87/504967.png"
+
+  utter_happy:
+  - text: "Yaay, let's watch Shrek!"
+    image: "https://e00-elmundo.uecdn.es/television/programacion-tv/img/v2/programas/87/504967.png"
+
+  utter_goodbye:
+  - text: "Bye, bye :)"
+
+actions:
+  - action_give_movie
+  - action_random_movie
+  - action_test
+  - action_give_genre
+  - action_give_year
+  - action_give_rating
+  - action_give_director
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

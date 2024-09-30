@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<FSM_Machine>
+	<!--FSM specification -->
+	<FSMtype Probabilistic="NO">CLASSIC</FSMtype>
+	<FSMid>StarClassicDeterministic</FSMid>
+	<Fsm>
+		<Callback>CheckEvents</Callback> <!--Method for events that concern to this FSM -->
+		<States>
+
+			<State Initial="YES">
+				<S_Name>SAD_STAR</S_Name>
+				<S_Action>SAD_STAR_ACTION</S_Action>
+				<S_inAction>NULL</S_inAction>
+				<S_outAction>NULL</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+      <State Initial="NO">
+        <S_Name>HAPPY_STAR</S_Name>
+        <S_Action>HAPPY_STAR_ACTION</S_Action>
+        <S_inAction>HAPPY_STAR_IN_ACTION</S_inAction>
+        <S_outAction>NULL</S_outAction>
+        <S_Fsm></S_Fsm>
+      </State>
+      <State Initial="NO">
+        <S_Name>LOST_STAR</S_Name>
+        <S_Action>LOST_STAR_ACTION</S_Action>
+        <S_inAction>LOST_STAR_IN_ACTION</S_inAction>
+        <S_outAction>NULL</S_outAction>
+        <S_Fsm></S_Fsm>
+      </State>
+      <State Initial="NO">
+        <S_Name>HIT_STAR</S_Name>
+        <S_Action>HIT_STAR_ACTION</S_Action>
+        <S_inAction>HIT_STAR_IN_ACTION</S_inAction>
+        <S_outAction>NULL</S_outAction>
+        <S_Fsm></S_Fsm>
+      </State>
+		</States>
+		
+		<Transitions> 
+		  	<Transition>
+				<T_Name>TO_HAPPY_STAR</T_Name>
+				<T_Origin>SAD_STAR</T_Origin>
+				<T_Destination>HAPPY_STAR</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>EVENT_HAPPY_STAR</ID> 
+						<Type>BASIC</Type>
+					</Event>
+				</Events>	
+			</Transition>
+      
+      <Transition>
+        <T_Name>TO_LOST_STAR</T_Name>
+        <T_Origin>SAD_STAR</T_Origin>
+        <T_Destination>LOST_STAR</T_Destination>
+        <T_Action>NULL</T_Action>
+        <Events>
+          <Event>
+            <ID>EVENT_LOST_STAR</ID>
+            <Type>BASIC</Type>
+          </Event>
+        </Events>
+      </Transition>
+
+      <Transition>
+        <T_Name>TO_HIT_STAR</T_Name>
+        <T_Origin>SAD_STAR</T_Origin>
+        <T_Destination>HIT_STAR</T_Destination>
+        <T_Action>NULL</T_Action>
+        <Events>
+          <Event>
+            <ID>EVENT_HIT_STAR</ID>
+            <Type>BASIC</Type>
+          </Event>
+        </Events>
+      </Transition>
+
+      <!--Loops-->
+      <Transition>
+        <T_Name>TO_LOST_STAR</T_Name>
+        <T_Origin>LOST_STAR</T_Origin>
+        <T_Destination>LOST_STAR</T_Destination>
+        <T_Action>NULL</T_Action>
+        <Events>
+          <Event>
+            <ID>EVENT_LOST_STAR</ID>
+            <Type>BASIC</Type>
+          </Event>
+        </Events>
+      </Transition>
+
+      <Transition>
+        <T_Name>TO_HAPPY_STAR</T_Name>
+        <T_Origin>HAPPY_STAR</T_Origin>
+        <T_Destination>HAPPY_STAR</T_Destination>
+        <T_Action>NULL</T_Action>
+        <Events>
+          <Event>
+            <ID>EVENT_HAPPY_STAR</ID>
+            <Type>BASIC</Type>
+          </Event>
+        </Events>
+      </Transition>
+
+      <Transition>
+        <T_Name>TO_SAD_STAR</T_Name>
+        <T_Origin>SAD_STAR</T_Origin>
+        <T_Destination>SAD_STAR</T_Destination>
+        <T_Action>NULL</T_Action>
+        <Events>
+          <Event>
+            <ID>EVENT_SAD_STAR</ID>
+            <Type>BASIC</Type>
+          </Event>
+        </Events>
+      </Transition>
+
+    </Transitions>
+	</Fsm>
+</FSM_Machine>

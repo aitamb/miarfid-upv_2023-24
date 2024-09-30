@@ -1,0 +1,142 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: watch_movie
+  examples: |
+    - I want to watch a movie
+    - What movie can I watch?
+    - Do you have any movie recommendations?
+    - Tell me a movie to watch
+    - A movie please
+    - Tell me what movie to watch
+    - Recommend me a movie
+    - Any movie recommendations?
+    - I don't know what movie to watch
+
+- intent: genre_movie
+  examples: |
+    - Tell me some [action]{"entity": "genre", "value": "action"} movies
+    - I want to watch a [comedy]{"entity": "genre", "value": "comedy"} movie
+    - I want to watch a [drama]{"entity": "genre", "value": "drama"} movie
+    - I want to watch a [horror]{"entity": "genre", "value": "horror"} movie
+    - Any [romance]{"entity": "genre", "romance": "action"} movies?
+
+- intent: director_movie
+  examples : |
+    - Tell me some [Sofia Coppola]{"entity": "director", "value": "Sofia Coppola"} movies
+    - I want to watch a movie by [Steven Spielberg]{"entity": "director", "value": "Steven Spielberg"}
+    - I want to watch a movie by [Christopher Nolan]{"entity": "director", "value": "Christopher Nolan"}
+    - I want to watch a movie by [Martin Scorsese]{"entity": "director", "value": "Martin Scorsese"}
+    - I want to watch a movie by [Quentin Tarantino]{"entity": "director", "value": "Quentin Tarantino"}
+    - I want to watch a movie by [David Fincher]{"entity": "director", "value": "David Fincher"}
+    - I want to watch a movie by [James Cameron]{"entity": "director", "value": "James Cameron"}
+    - I want to watch a movie by [Ridley Scott]{"entity": "director", "value": "Ridley Scott"}
+    - I want to watch a movie by [Stanley Kubrick]{"entity": "director", "value": "Stanley Kubrick"}
+    - I want to watch a [Alfred Hitchcock]{"entity": "director", "value": "Alfred Hitchcock"} movie
+    - I want to watch a [Tim Burton]{"entity": "director", "value": "Tim Burton"} movie
+    - I want to watch a [Clint Eastwood {"entity": "director", "value": "Francis Ford Coppola"} movie
+
+- intent: rating_movie
+  examples: |
+    - I want to watch a movie with a rating of [8.5]{"entity": "rating", "value": "8.5"}
+    - I want to watch a movie with a rating of [9]{"entity": "rating", "value": "9"}
+    - I want a movie of [8]{"entity": "rating", "value": "8"} rating
+    - I want to watch a movie with a rating of [7.5]{"entity": "rating", "value": "7.5"}
+    - I want a [7]{"entity": "rating", "value": "7"} rated movie
+    - Tell me a movie with a rating of [6.5]{"entity": "rating", "value": "6.5"}
+    - Tell me a movie with a rating of [5.5]{"entity": "rating", "value": "5.5"} points
+    - I want to watch a movie with a rating of [10]{"entity": "rating", "value": "10"}
+    - Tell me a movie with a rating of [7]{"entity": "rating", "value": "7"}
+
+- intent: year_movie
+  examples: |
+    - I want to watch a movie from [2010]{"entity": "year", "value": "2010"}
+    - I want a movie from [2018]{"entity": "year", "value": "2018"}
+    - I want to watch a movie from year [2019]{"entity": "year", "value": "2019"}
+    - Tell me some movies from [2020]{"entity": "year", "value": "2020"}
+    - Say what movies are from [2017]{"entity": "year", "value": "2017"}
+    - I want to watch a movie from [1995]{"entity": "year", "value": "1995"}
+    - I want a movie from [1982]{"entity": "year", "value": "1982"}
+

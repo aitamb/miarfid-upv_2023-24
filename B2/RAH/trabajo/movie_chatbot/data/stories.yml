@@ -1,0 +1,80 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+
+- story: guided movie 1
+  steps:
+  - intent: watch_movie
+  - action: utter_ask_path
+  - intent: affirm
+  - action: utter_ask_genre
+
+- story: guided movie 2
+  steps:
+  - intent: genre_movie
+  - slot_was_set:
+    - guided: True
+  - action: utter_ask_year
+
+- story: guided movie 3
+  steps:
+  - intent: year_movie
+  - slot_was_set:
+    - guided: True
+  - action: utter_ask_rating
+
+- story: guided movie 4
+  steps:
+  - intent: rating_movie
+  - slot_was_set:
+    - guided: True
+  - action: action_give_movie
+
+- story: random movie
+  steps:
+  - intent: watch_movie
+  - action: utter_ask_path
+  - intent: deny
+  - action: action_random_movie
+
+- story: genre 2
+  steps:
+  - intent: genre_movie
+  - slot_was_set:
+    - guided: False
+  - action: action_give_genre
+
+- story: year 2
+  steps:
+  - intent: year_movie
+  - slot_was_set:
+    - guided: False
+  - action: action_give_year
+
+- story: rating 2
+  steps:
+  - intent: rating_movie
+  - slot_was_set:
+    - guided: False
+  - action: action_give_rating
+
+- story: director
+  steps:
+  - intent: director_movie
+  - slot_was_set:
+    - guided: False
+  - action: action_give_director

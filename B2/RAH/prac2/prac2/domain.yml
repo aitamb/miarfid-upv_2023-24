@@ -1,0 +1,45 @@
+version: "3.1"
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - order_pizza
+  - choose_topping
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hi, how can I help you?"
+
+  utter_cheer_up:
+  - text: "Hey, maybe a pizza can cheer you up!"
+
+  utter_happy:
+  - text: "Let's order a pizza!"
+
+  utter_goodbye:
+  - text: "Bye, bye :)"
+
+  utter_iamabot:
+  - text: "I am a bot that will help you ordering your favourite pizza ;)"
+
+  utter_ask_toppings:
+  - text: "I can order you a pizza! What toppings do you want?"
+
+  utter_confirm_order:
+  - text: "Yay, I have ordered your pizza!"
+
+  utter_cancel_order:
+  - text: "Ok, I have cancelled your order."
+
+actions:
+  - action_receive_topping

@@ -1,0 +1,86 @@
+# TRAINING DATA #
+- Dataset size: 8000 files
+
+#   TEST DATA   #
+- Dataset size: 2000 files
+
+#  TRAINING...  #
+epoch 0 loss 0.01
+epoch 1 loss 0.02
+epoch 2 loss 0.01
+epoch 3 loss 0.01
+epoch 4 loss 0.01
+epoch 5 loss 0.01
+epoch 6 loss 0.01
+epoch 7 loss 0.01
+epoch 8 loss 0.01
+epoch 9 loss 0.01
+epoch 10 loss 0.01
+epoch 11 loss 0.01
+epoch 12 loss 0.00
+epoch 13 loss 0.01
+epoch 14 loss 0.00
+epoch 15 loss 0.00
+epoch 16 loss 0.00
+epoch 17 loss 0.00
+epoch 18 loss 0.00
+epoch 19 loss 0.00
+epoch 20 loss 0.00
+epoch 21 loss 0.00
+epoch 22 loss 0.00
+epoch 23 loss 0.00
+epoch 24 loss 0.00
+epoch 25 loss 0.00
+epoch 26 loss 0.00
+epoch 27 loss 0.00
+epoch 28 loss 0.00
+epoch 29 loss 0.00
+epoch 30 loss 0.00
+epoch 31 loss 0.00
+epoch 32 loss 0.00
+epoch 33 loss 0.00
+epoch 34 loss 0.00
+epoch 35 loss 0.00
+epoch 36 loss 0.00
+epoch 37 loss 0.00
+epoch 38 loss 0.00
+epoch 39 loss 0.00
+epoch 40 loss 0.00
+epoch 41 loss 0.00
+epoch 42 loss 0.00
+epoch 43 loss 0.00
+epoch 44 loss 0.00
+epoch 45 loss 0.00
+epoch 46 loss 0.00
+epoch 47 loss 0.00
+epoch 48 loss 0.00
+epoch 49 loss 0.00
+epoch 50 loss 0.00
+epoch 51 loss 0.00
+epoch 52 loss 0.00
+epoch 53 loss 0.00
+epoch 54 loss 0.00
+epoch 55 loss 0.00
+epoch 56 loss 0.00
+epoch 57 loss 0.00
+epoch 58 loss 0.00
+epoch 59 loss 0.00
+epoch 60 loss 0.00
+epoch 61 loss 0.00
+epoch 62 loss 0.00
+epoch 63 loss 0.00
+epoch 64 loss 0.00
+epoch 65 loss 0.00
+epoch 66 loss 0.00
+epoch 67 loss 0.00
+epoch 68 loss 0.00
+epoch 69 loss 0.00
+epoch 70 loss 0.00
+epoch 71 loss 0.00
+epoch 72 loss 0.00
+epoch 73 loss 0.00
+epoch 74 loss 0.00
+-> Training finished.
+
+#    TESTING...   #
+error rate 92.36%,  (15681/16979)

@@ -1,0 +1,49 @@
+
+ 
+=============================================================================================
+...LOADING A CLASSIC MACHINE named 'GhostRedFSM'
+>>ADDED STATE 'SCATTERING'.
+>>ADDED STATE 'CHASING'.
+>>ADDED STATE 'FRIGHTENING'.
+>>ADDED STATE 'DYING'.
+>>ADDED TRANSITION 'SCATTERING_TO_CHASING' to FSM.
+>>ADDED TRANSITION 'SCATTERING_TO_CHASING' to State 'SCATTERING'.
+>>ADDED TRANSITION 'CHASING_TO_SCATTERING' to FSM.
+>>ADDED TRANSITION 'CHASING_TO_SCATTERING' to State 'CHASING'.
+>>ADDED TRANSITION 'SCATTERING_TO_FRIGHTENING' to FSM.
+>>ADDED TRANSITION 'SCATTERING_TO_FRIGHTENING' to State 'SCATTERING'.
+>>ADDED TRANSITION 'CHASING_TO_FRIGHTENING' to FSM.
+>>ADDED TRANSITION 'CHASING_TO_FRIGHTENING' to State 'CHASING'.
+>>ADDED TRANSITION 'FRIGHTENING_TO_SCATTERING' to FSM.
+>>ADDED TRANSITION 'FRIGHTENING_TO_SCATTERING' to State 'FRIGHTENING'.
+>>ADDED TRANSITION 'FRIGHTENING_TO_DYING' to FSM.
+>>ADDED TRANSITION 'FRIGHTENING_TO_DYING' to State 'FRIGHTENING'.
+>>ADDED TRANSITION 'DYING_TO_SCATTERING' to FSM.
+>>ADDED TRANSITION 'DYING_TO_SCATTERING' to State 'DYING'.
+States ADDED: 4 of 4
+States NOT ADDED: 0
+Transitions ADDED: 7 of 7
+Transitions NOT ADDED: 0
+Number of errors: 0
+>>ERROR. There is not an initial state. Check XML file
+ (Parsing of CLASSIC Machine named 'GhostRedFSM' is INCONSISTENT)
+ 
+=============================================================================================
+...LOADING A BT named 'GhostBlueBT'
+>>ADDED TREE Root AND ITS CHILDS.
+>>ADDED TREE Frightening AND ITS CHILDS.
+>>ADDED TREE Movement AND ITS CHILDS.
+Trees Added: 3 out of 3
+
+(Parsing of BT named "GhostBlueBT" is OK!)
+ 
+Critical errors parsing BTs: 0
+
+LOG FILE	30/1/2024 16:10:06
+--------------------------------------
+
+--------SUMMARY--------
+Number of main machines: 1
+Number of submachines: 0
+TOTAL MACHINES ADDED: 1
+NUMBER OF BTs ADDED: 1

@@ -1,0 +1,34 @@
+# TRAINING DATA #
+- Dataset size: 8000 files
+
+#   TEST DATA   #
+- Dataset size: 2000 files
+
+#  TRAINING...  #
+epoch 0 loss 0.01
+epoch 1 loss 0.02
+epoch 2 loss 0.01
+epoch 3 loss 0.01
+epoch 4 loss 0.01
+epoch 5 loss 0.01
+epoch 6 loss 0.01
+epoch 7 loss 0.01
+epoch 8 loss 0.01
+epoch 9 loss 0.01
+epoch 10 loss 0.01
+epoch 11 loss 0.01
+epoch 12 loss 0.00
+epoch 13 loss 0.01
+epoch 14 loss 0.00
+epoch 15 loss 0.00
+epoch 16 loss 0.00
+epoch 17 loss 0.00
+epoch 18 loss 0.00
+epoch 19 loss 0.00
+-> Training finished.
+
+# SAVING MODEL... #
+-> Model saved.
+
+#   TESTING...  #
+error rate 143.00%,  (24280/16979)

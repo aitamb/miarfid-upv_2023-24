@@ -1,0 +1,739 @@
+Torch version:  2.1.0+cu121
+Device:  cuda
+
+Loading MNIST  train  Dataset...
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to .data/MNIST/raw/train-images-idx3-ubyte.gz
+
+100%|██████████| 9912422/9912422 [00:00<00:00, 127647582.78it/s]
+
+Extracting .data/MNIST/raw/train-images-idx3-ubyte.gz to .data/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to .data/MNIST/raw/train-labels-idx1-ubyte.gz
+
+100%|██████████| 28881/28881 [00:00<00:00, 88744098.04it/s]
+
+Extracting .data/MNIST/raw/train-labels-idx1-ubyte.gz to .data/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to .data/MNIST/raw/t10k-images-idx3-ubyte.gz
+
+100%|██████████| 1648877/1648877 [00:00<00:00, 53270054.74it/s]
+
+Extracting .data/MNIST/raw/t10k-images-idx3-ubyte.gz to .data/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to .data/MNIST/raw/t10k-labels-idx1-ubyte.gz
+
+100%|██████████| 4542/4542 [00:00<00:00, 19360293.46it/s]
+
+Extracting .data/MNIST/raw/t10k-labels-idx1-ubyte.gz to .data/MNIST/raw
+
+
+	Total Len.:  60000 
+ --------------------------------------------------
+
+Loading MNIST  test  Dataset...
+	Total Len.:  10000 
+ --------------------------------------------------
+Num workers 1
+Net(
+  (layers): ModuleList(
+    (0): Linear(in_features=784, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+  )
+  (classifier): Linear(in_features=1024, out_features=10, bias=True)
+  (criterion): CrossEntropyLoss()
+)
+
+---- Start Training ----
+
+Epoch 0: 100%|██████████| 600/600 [02:53<00:00,  3.45batch/s]
+
+	LR:  0.01
+
+
+Test 0: 100%|██████████| 100/100 [00:03<00:00, 32.96batch/s]
+
+[Epoch 1] Train Loss: 0.014560 - Test Loss: 0.002298 - Train Accuracy: 49.39% - Test Accuracy: 92.83%
+
+Epoch 1: 100%|██████████| 600/600 [02:48<00:00,  3.57batch/s]
+
+	LR:  0.01
+
+
+Test 1: 100%|██████████| 100/100 [00:02<00:00, 43.00batch/s]
+
+[Epoch 2] Train Loss: 0.011758 - Test Loss: 0.001371 - Train Accuracy: 59.39% - Test Accuracy: 95.79%
+
+Epoch 2: 100%|██████████| 600/600 [02:48<00:00,  3.56batch/s]
+
+	LR:  0.01
+
+
+Test 2: 100%|██████████| 100/100 [00:02<00:00, 43.43batch/s]
+
+[Epoch 3] Train Loss: 0.010910 - Test Loss: 0.001142 - Train Accuracy: 62.50% - Test Accuracy: 96.27%
+
+Epoch 3: 100%|██████████| 600/600 [02:49<00:00,  3.54batch/s]
+
+	LR:  0.01
+
+
+Test 3: 100%|██████████| 100/100 [00:02<00:00, 37.45batch/s]
+
+[Epoch 4] Train Loss: 0.010294 - Test Loss: 0.001122 - Train Accuracy: 64.61% - Test Accuracy: 96.27%
+
+Epoch 4: 100%|██████████| 600/600 [02:47<00:00,  3.59batch/s]
+
+	LR:  0.01
+
+
+Test 4: 100%|██████████| 100/100 [00:02<00:00, 41.62batch/s]
+
+[Epoch 5] Train Loss: 0.009920 - Test Loss: 0.000846 - Train Accuracy: 65.91% - Test Accuracy: 97.15%
+
+Epoch 5: 100%|██████████| 600/600 [02:48<00:00,  3.57batch/s]
+
+	LR:  0.01
+
+
+Test 5: 100%|██████████| 100/100 [00:02<00:00, 44.03batch/s]
+
+[Epoch 6] Train Loss: 0.009570 - Test Loss: 0.000795 - Train Accuracy: 66.82% - Test Accuracy: 97.26%
+
+Epoch 6: 100%|██████████| 600/600 [02:45<00:00,  3.61batch/s]
+
+	LR:  0.01
+
+
+Test 6: 100%|██████████| 100/100 [00:02<00:00, 34.85batch/s]
+
+[Epoch 7] Train Loss: 0.009339 - Test Loss: 0.000749 - Train Accuracy: 67.87% - Test Accuracy: 97.61%
+
+Epoch 7: 100%|██████████| 600/600 [02:48<00:00,  3.56batch/s]
+
+	LR:  0.01
+
+
+Test 7: 100%|██████████| 100/100 [00:02<00:00, 40.23batch/s]
+
+[Epoch 8] Train Loss: 0.009047 - Test Loss: 0.000781 - Train Accuracy: 68.79% - Test Accuracy: 97.65%
+
+Epoch 8: 100%|██████████| 600/600 [02:45<00:00,  3.63batch/s]
+
+	LR:  0.01
+
+
+Test 8: 100%|██████████| 100/100 [00:02<00:00, 42.46batch/s]
+
+[Epoch 9] Train Loss: 0.008954 - Test Loss: 0.000604 - Train Accuracy: 69.18% - Test Accuracy: 98.04%
+
+Epoch 9: 100%|██████████| 600/600 [02:44<00:00,  3.64batch/s]
+
+	LR:  0.01
+
+
+Test 9: 100%|██████████| 100/100 [00:02<00:00, 35.17batch/s]
+
+[Epoch 10] Train Loss: 0.008770 - Test Loss: 0.000566 - Train Accuracy: 69.77% - Test Accuracy: 98.17%
+
+Epoch 10: 100%|██████████| 600/600 [02:45<00:00,  3.63batch/s]
+
+	LR:  0.01
+
+
+Test 10: 100%|██████████| 100/100 [00:02<00:00, 42.15batch/s]
+
+[Epoch 11] Train Loss: 0.008553 - Test Loss: 0.000584 - Train Accuracy: 70.40% - Test Accuracy: 98.05%
+
+Epoch 11: 100%|██████████| 600/600 [02:47<00:00,  3.58batch/s]
+
+	LR:  0.01
+
+
+Test 11: 100%|██████████| 100/100 [00:02<00:00, 41.56batch/s]
+
+[Epoch 12] Train Loss: 0.008452 - Test Loss: 0.000571 - Train Accuracy: 70.81% - Test Accuracy: 98.15%
+
+Epoch 12: 100%|██████████| 600/600 [02:44<00:00,  3.65batch/s]
+
+	LR:  0.01
+
+
+Test 12: 100%|██████████| 100/100 [00:02<00:00, 44.22batch/s]
+
+[Epoch 13] Train Loss: 0.008345 - Test Loss: 0.000600 - Train Accuracy: 71.09% - Test Accuracy: 98.04%
+
+Epoch 13: 100%|██████████| 600/600 [02:44<00:00,  3.65batch/s]
+
+	LR:  0.01
+
+
+Test 13: 100%|██████████| 100/100 [00:02<00:00, 39.89batch/s]
+
+[Epoch 14] Train Loss: 0.008243 - Test Loss: 0.000533 - Train Accuracy: 71.54% - Test Accuracy: 98.25%
+
+Epoch 14: 100%|██████████| 600/600 [02:44<00:00,  3.65batch/s]
+
+	LR:  0.01
+
+
+Test 14: 100%|██████████| 100/100 [00:02<00:00, 43.84batch/s]
+
+[Epoch 15] Train Loss: 0.008175 - Test Loss: 0.000451 - Train Accuracy: 71.78% - Test Accuracy: 98.55%
+
+Epoch 15: 100%|██████████| 600/600 [02:47<00:00,  3.58batch/s]
+
+	LR:  0.01
+
+
+Test 15: 100%|██████████| 100/100 [00:02<00:00, 43.78batch/s]
+
+[Epoch 16] Train Loss: 0.008069 - Test Loss: 0.000500 - Train Accuracy: 72.19% - Test Accuracy: 98.39%
+
+Epoch 16: 100%|██████████| 600/600 [02:43<00:00,  3.66batch/s]
+
+	LR:  0.01
+
+
+Test 16: 100%|██████████| 100/100 [00:02<00:00, 44.36batch/s]
+
+[Epoch 17] Train Loss: 0.008045 - Test Loss: 0.000446 - Train Accuracy: 72.07% - Test Accuracy: 98.48%
+
+Epoch 17: 100%|██████████| 600/600 [02:45<00:00,  3.63batch/s]
+
+	LR:  0.01
+
+
+Test 17: 100%|██████████| 100/100 [00:02<00:00, 44.21batch/s]
+
+[Epoch 18] Train Loss: 0.007955 - Test Loss: 0.000425 - Train Accuracy: 72.53% - Test Accuracy: 98.62%
+
+Epoch 18: 100%|██████████| 600/600 [02:43<00:00,  3.67batch/s]
+
+	LR:  0.01
+
+
+Test 18: 100%|██████████| 100/100 [00:02<00:00, 44.45batch/s]
+
+[Epoch 19] Train Loss: 0.007847 - Test Loss: 0.000482 - Train Accuracy: 72.80% - Test Accuracy: 98.39%
+
+Epoch 19: 100%|██████████| 600/600 [02:45<00:00,  3.63batch/s]
+
+	LR:  0.01
+
+
+Test 19: 100%|██████████| 100/100 [00:02<00:00, 45.57batch/s]
+
+[Epoch 20] Train Loss: 0.007736 - Test Loss: 0.000415 - Train Accuracy: 73.17% - Test Accuracy: 98.52%
+
+Epoch 20: 100%|██████████| 600/600 [02:44<00:00,  3.66batch/s]
+
+	LR:  0.01
+
+
+Test 20: 100%|██████████| 100/100 [00:02<00:00, 44.74batch/s]
+
+[Epoch 21] Train Loss: 0.007717 - Test Loss: 0.000503 - Train Accuracy: 73.48% - Test Accuracy: 98.25%
+
+Epoch 21: 100%|██████████| 600/600 [02:44<00:00,  3.65batch/s]
+
+	LR:  0.01
+
+
+Test 21: 100%|██████████| 100/100 [00:02<00:00, 43.53batch/s]
+
+[Epoch 22] Train Loss: 0.007711 - Test Loss: 0.000424 - Train Accuracy: 73.54% - Test Accuracy: 98.61%
+
+Epoch 22: 100%|██████████| 600/600 [02:44<00:00,  3.64batch/s]
+
+	LR:  0.01
+
+
+Test 22: 100%|██████████| 100/100 [00:02<00:00, 43.40batch/s]
+
+[Epoch 23] Train Loss: 0.007615 - Test Loss: 0.000403 - Train Accuracy: 73.72% - Test Accuracy: 98.69%
+
+Epoch 23: 100%|██████████| 600/600 [02:49<00:00,  3.54batch/s]
+
+	LR:  0.01
+
+
+Test 23: 100%|██████████| 100/100 [00:02<00:00, 43.94batch/s]
+
+[Epoch 24] Train Loss: 0.007603 - Test Loss: 0.000425 - Train Accuracy: 73.61% - Test Accuracy: 98.56%
+
+Epoch 24: 100%|██████████| 600/600 [02:49<00:00,  3.53batch/s]
+
+	LR:  0.001
+
+
+Test 24: 100%|██████████| 100/100 [00:02<00:00, 43.33batch/s]
+
+[Epoch 25] Train Loss: 0.007511 - Test Loss: 0.000452 - Train Accuracy: 73.93% - Test Accuracy: 98.59%
+
+Epoch 25: 100%|██████████| 600/600 [02:46<00:00,  3.60batch/s]
+
+	LR:  0.001
+
+
+Test 25: 100%|██████████| 100/100 [00:02<00:00, 35.21batch/s]
+
+[Epoch 26] Train Loss: 0.007139 - Test Loss: 0.000309 - Train Accuracy: 75.25% - Test Accuracy: 98.92%
+
+Epoch 26: 100%|██████████| 600/600 [02:46<00:00,  3.61batch/s]
+
+	LR:  0.001
+
+
+Test 26: 100%|██████████| 100/100 [00:02<00:00, 43.11batch/s]
+
+[Epoch 27] Train Loss: 0.006947 - Test Loss: 0.000304 - Train Accuracy: 75.87% - Test Accuracy: 99.00%
+
+Epoch 27: 100%|██████████| 600/600 [02:50<00:00,  3.52batch/s]
+
+	LR:  0.001
+
+
+Test 27: 100%|██████████| 100/100 [00:02<00:00, 43.63batch/s]
+
+[Epoch 28] Train Loss: 0.006962 - Test Loss: 0.000294 - Train Accuracy: 76.10% - Test Accuracy: 99.03%
+
+Epoch 28: 100%|██████████| 600/600 [02:49<00:00,  3.54batch/s]
+
+	LR:  0.001
+
+
+Test 28: 100%|██████████| 100/100 [00:02<00:00, 40.99batch/s]
+
+[Epoch 29] Train Loss: 0.006929 - Test Loss: 0.000284 - Train Accuracy: 76.10% - Test Accuracy: 99.08%
+
+Epoch 29: 100%|██████████| 600/600 [02:48<00:00,  3.57batch/s]
+
+	LR:  0.001
+
+
+Test 29: 100%|██████████| 100/100 [00:02<00:00, 38.25batch/s]
+
+[Epoch 30] Train Loss: 0.006795 - Test Loss: 0.000296 - Train Accuracy: 76.43% - Test Accuracy: 98.99%
+
+Epoch 30: 100%|██████████| 600/600 [02:48<00:00,  3.56batch/s]
+
+	LR:  0.001
+
+
+Test 30: 100%|██████████| 100/100 [00:02<00:00, 43.01batch/s]
+
+[Epoch 31] Train Loss: 0.006700 - Test Loss: 0.000289 - Train Accuracy: 76.79% - Test Accuracy: 99.02%
+
+Epoch 31: 100%|██████████| 600/600 [02:49<00:00,  3.53batch/s]
+
+	LR:  0.001
+
+
+Test 31: 100%|██████████| 100/100 [00:02<00:00, 42.41batch/s]
+
+[Epoch 32] Train Loss: 0.006827 - Test Loss: 0.000295 - Train Accuracy: 76.42% - Test Accuracy: 98.97%
+
+Epoch 32: 100%|██████████| 600/600 [02:47<00:00,  3.59batch/s]
+
+	LR:  0.001
+
+
+Test 32: 100%|██████████| 100/100 [00:02<00:00, 39.49batch/s]
+
+[Epoch 33] Train Loss: 0.006767 - Test Loss: 0.000285 - Train Accuracy: 76.56% - Test Accuracy: 99.03%
+
+Epoch 33: 100%|██████████| 600/600 [02:47<00:00,  3.58batch/s]
+
+	LR:  0.001
+
+
+Test 33: 100%|██████████| 100/100 [00:02<00:00, 43.58batch/s]
+
+[Epoch 34] Train Loss: 0.006772 - Test Loss: 0.000276 - Train Accuracy: 76.56% - Test Accuracy: 99.12%
+
+Epoch 34: 100%|██████████| 600/600 [02:47<00:00,  3.57batch/s]
+
+	LR:  0.001
+
+
+Test 34: 100%|██████████| 100/100 [00:02<00:00, 37.51batch/s]
+
+[Epoch 35] Train Loss: 0.006725 - Test Loss: 0.000291 - Train Accuracy: 76.81% - Test Accuracy: 99.03%
+
+Epoch 35: 100%|██████████| 600/600 [02:57<00:00,  3.38batch/s]
+
+	LR:  0.001
+
+
+Test 35: 100%|██████████| 100/100 [00:02<00:00, 43.47batch/s]
+
+[Epoch 36] Train Loss: 0.006684 - Test Loss: 0.000278 - Train Accuracy: 76.89% - Test Accuracy: 99.04%
+
+Epoch 36: 100%|██████████| 600/600 [02:53<00:00,  3.46batch/s]
+
+	LR:  0.001
+
+
+Test 36: 100%|██████████| 100/100 [00:02<00:00, 42.01batch/s]
+
+[Epoch 37] Train Loss: 0.006673 - Test Loss: 0.000290 - Train Accuracy: 77.05% - Test Accuracy: 99.07%
+
+Epoch 37: 100%|██████████| 600/600 [02:57<00:00,  3.39batch/s]
+
+	LR:  0.001
+
+
+Test 37: 100%|██████████| 100/100 [00:02<00:00, 43.83batch/s]
+
+[Epoch 38] Train Loss: 0.006724 - Test Loss: 0.000267 - Train Accuracy: 76.87% - Test Accuracy: 99.04%
+
+Epoch 38: 100%|██████████| 600/600 [02:48<00:00,  3.56batch/s]
+
+	LR:  0.001
+
+
+Test 38: 100%|██████████| 100/100 [00:02<00:00, 33.71batch/s]
+
+[Epoch 39] Train Loss: 0.006735 - Test Loss: 0.000264 - Train Accuracy: 76.81% - Test Accuracy: 99.10%
+
+Epoch 39: 100%|██████████| 600/600 [02:47<00:00,  3.59batch/s]
+
+	LR:  0.001
+
+
+Test 39: 100%|██████████| 100/100 [00:02<00:00, 43.16batch/s]
+
+[Epoch 40] Train Loss: 0.006698 - Test Loss: 0.000283 - Train Accuracy: 76.82% - Test Accuracy: 99.02%
+
+Epoch 40: 100%|██████████| 600/600 [02:48<00:00,  3.57batch/s]
+
+	LR:  0.001
+
+
+Test 40: 100%|██████████| 100/100 [00:02<00:00, 43.50batch/s]
+
+[Epoch 41] Train Loss: 0.006714 - Test Loss: 0.000261 - Train Accuracy: 76.73% - Test Accuracy: 99.10%
+
+Epoch 41: 100%|██████████| 600/600 [02:47<00:00,  3.57batch/s]
+
+	LR:  0.001
+
+
+Test 41: 100%|██████████| 100/100 [00:02<00:00, 37.33batch/s]
+
+[Epoch 42] Train Loss: 0.006605 - Test Loss: 0.000265 - Train Accuracy: 77.13% - Test Accuracy: 99.02%
+
+Epoch 42: 100%|██████████| 600/600 [02:48<00:00,  3.57batch/s]
+
+	LR:  0.001
+
+
+Test 42: 100%|██████████| 100/100 [00:02<00:00, 43.54batch/s]
+
+[Epoch 43] Train Loss: 0.006636 - Test Loss: 0.000272 - Train Accuracy: 77.09% - Test Accuracy: 99.01%
+
+Epoch 43: 100%|██████████| 600/600 [02:48<00:00,  3.57batch/s]
+
+	LR:  0.001
+
+
+Test 43: 100%|██████████| 100/100 [00:02<00:00, 43.12batch/s]
+
+[Epoch 44] Train Loss: 0.006683 - Test Loss: 0.000264 - Train Accuracy: 76.82% - Test Accuracy: 99.08%
+
+Epoch 44: 100%|██████████| 600/600 [02:46<00:00,  3.60batch/s]
+
+	LR:  0.001
+
+
+Test 44: 100%|██████████| 100/100 [00:02<00:00, 38.88batch/s]
+
+[Epoch 45] Train Loss: 0.006578 - Test Loss: 0.000263 - Train Accuracy: 77.23% - Test Accuracy: 99.10%
+
+Epoch 45: 100%|██████████| 600/600 [02:47<00:00,  3.58batch/s]
+
+	LR:  0.001
+
+
+Test 45: 100%|██████████| 100/100 [00:02<00:00, 44.54batch/s]
+
+[Epoch 46] Train Loss: 0.006645 - Test Loss: 0.000252 - Train Accuracy: 77.00% - Test Accuracy: 99.08%
+
+Epoch 46: 100%|██████████| 600/600 [02:46<00:00,  3.60batch/s]
+
+	LR:  0.001
+
+
+Test 46: 100%|██████████| 100/100 [00:02<00:00, 36.19batch/s]
+
+[Epoch 47] Train Loss: 0.006630 - Test Loss: 0.000248 - Train Accuracy: 77.05% - Test Accuracy: 99.10%
+
+Epoch 47: 100%|██████████| 600/600 [02:44<00:00,  3.65batch/s]
+
+	LR:  0.001
+
+
+Test 47: 100%|██████████| 100/100 [00:02<00:00, 44.89batch/s]
+
+[Epoch 48] Train Loss: 0.006555 - Test Loss: 0.000256 - Train Accuracy: 77.41% - Test Accuracy: 99.12%
+
+Epoch 48: 100%|██████████| 600/600 [02:43<00:00,  3.67batch/s]
+
+	LR:  0.001
+
+
+Test 48: 100%|██████████| 100/100 [00:02<00:00, 36.85batch/s]
+
+[Epoch 49] Train Loss: 0.006540 - Test Loss: 0.000264 - Train Accuracy: 77.45% - Test Accuracy: 99.05%
+
+Epoch 49: 100%|██████████| 600/600 [02:43<00:00,  3.67batch/s]
+
+	LR:  0.0001
+
+
+Test 49: 100%|██████████| 100/100 [00:02<00:00, 44.51batch/s]
+
+[Epoch 50] Train Loss: 0.006602 - Test Loss: 0.000260 - Train Accuracy: 76.99% - Test Accuracy: 99.14%
+
+Epoch 50: 100%|██████████| 600/600 [02:46<00:00,  3.60batch/s]
+
+	LR:  0.0001
+
+
+Test 50: 100%|██████████| 100/100 [00:02<00:00, 41.18batch/s]
+
+[Epoch 51] Train Loss: 0.006503 - Test Loss: 0.000252 - Train Accuracy: 77.42% - Test Accuracy: 99.16%
+
+Epoch 51: 100%|██████████| 600/600 [02:44<00:00,  3.64batch/s]
+
+	LR:  0.0001
+
+
+Test 51: 100%|██████████| 100/100 [00:02<00:00, 45.10batch/s]
+
+[Epoch 52] Train Loss: 0.006556 - Test Loss: 0.000250 - Train Accuracy: 77.29% - Test Accuracy: 99.13%
+
+Epoch 52: 100%|██████████| 600/600 [02:44<00:00,  3.64batch/s]
+
+	LR:  0.0001
+
+
+Test 52: 100%|██████████| 100/100 [00:02<00:00, 44.60batch/s]
+
+[Epoch 53] Train Loss: 0.006436 - Test Loss: 0.000255 - Train Accuracy: 77.79% - Test Accuracy: 99.11%
+
+Epoch 53: 100%|██████████| 600/600 [02:45<00:00,  3.64batch/s]
+
+	LR:  0.0001
+
+
+Test 53: 100%|██████████| 100/100 [00:02<00:00, 42.65batch/s]
+
+[Epoch 54] Train Loss: 0.006567 - Test Loss: 0.000262 - Train Accuracy: 77.22% - Test Accuracy: 99.12%
+
+Epoch 54: 100%|██████████| 600/600 [02:43<00:00,  3.67batch/s]
+
+	LR:  0.0001
+
+
+Test 54: 100%|██████████| 100/100 [00:02<00:00, 40.02batch/s]
+
+[Epoch 55] Train Loss: 0.006556 - Test Loss: 0.000256 - Train Accuracy: 77.25% - Test Accuracy: 99.11%
+
+Epoch 55: 100%|██████████| 600/600 [02:43<00:00,  3.67batch/s]
+
+	LR:  0.0001
+
+
+Test 55: 100%|██████████| 100/100 [00:02<00:00, 42.74batch/s]
+
+[Epoch 56] Train Loss: 0.006510 - Test Loss: 0.000255 - Train Accuracy: 77.48% - Test Accuracy: 99.08%
+
+Epoch 56: 100%|██████████| 600/600 [02:41<00:00,  3.72batch/s]
+
+	LR:  0.0001
+
+
+Test 56: 100%|██████████| 100/100 [00:02<00:00, 36.40batch/s]
+
+[Epoch 57] Train Loss: 0.006490 - Test Loss: 0.000253 - Train Accuracy: 77.71% - Test Accuracy: 99.15%
+
+Epoch 57: 100%|██████████| 600/600 [02:42<00:00,  3.68batch/s]
+
+	LR:  0.0001
+
+
+Test 57: 100%|██████████| 100/100 [00:02<00:00, 44.13batch/s]
+
+[Epoch 58] Train Loss: 0.006529 - Test Loss: 0.000260 - Train Accuracy: 77.41% - Test Accuracy: 99.07%
+
+Epoch 58: 100%|██████████| 600/600 [02:43<00:00,  3.68batch/s]
+
+	LR:  0.0001
+
+
+Test 58: 100%|██████████| 100/100 [00:02<00:00, 41.09batch/s]
+
+[Epoch 59] Train Loss: 0.006538 - Test Loss: 0.000264 - Train Accuracy: 77.39% - Test Accuracy: 99.11%
+
+Epoch 59: 100%|██████████| 600/600 [02:42<00:00,  3.68batch/s]
+
+	LR:  0.0001
+
+
+Test 59: 100%|██████████| 100/100 [00:02<00:00, 44.74batch/s]
+
+[Epoch 60] Train Loss: 0.006514 - Test Loss: 0.000259 - Train Accuracy: 77.37% - Test Accuracy: 99.14%
+
+Epoch 60: 100%|██████████| 600/600 [02:43<00:00,  3.68batch/s]
+
+	LR:  0.0001
+
+
+Test 60: 100%|██████████| 100/100 [00:02<00:00, 45.39batch/s]
+
+[Epoch 61] Train Loss: 0.006483 - Test Loss: 0.000256 - Train Accuracy: 77.61% - Test Accuracy: 99.13%
+
+Epoch 61: 100%|██████████| 600/600 [02:42<00:00,  3.68batch/s]
+
+	LR:  0.0001
+
+
+Test 61: 100%|██████████| 100/100 [00:02<00:00, 40.21batch/s]
+
+[Epoch 62] Train Loss: 0.006494 - Test Loss: 0.000256 - Train Accuracy: 77.61% - Test Accuracy: 99.11%
+
+Epoch 62: 100%|██████████| 600/600 [02:41<00:00,  3.71batch/s]
+
+	LR:  0.0001
+
+
+Test 62: 100%|██████████| 100/100 [00:02<00:00, 44.23batch/s]
+
+[Epoch 63] Train Loss: 0.006531 - Test Loss: 0.000259 - Train Accuracy: 77.41% - Test Accuracy: 99.09%
+
+Epoch 63: 100%|██████████| 600/600 [02:42<00:00,  3.69batch/s]
+
+	LR:  0.0001
+
+
+Test 63: 100%|██████████| 100/100 [00:02<00:00, 37.04batch/s]
+
+[Epoch 64] Train Loss: 0.006547 - Test Loss: 0.000254 - Train Accuracy: 77.33% - Test Accuracy: 99.17%
+
+Epoch 64: 100%|██████████| 600/600 [02:45<00:00,  3.63batch/s]
+
+	LR:  0.0001
+
+
+Test 64: 100%|██████████| 100/100 [00:02<00:00, 44.33batch/s]
+
+[Epoch 65] Train Loss: 0.006448 - Test Loss: 0.000249 - Train Accuracy: 77.63% - Test Accuracy: 99.15%
+
+Epoch 65: 100%|██████████| 600/600 [02:46<00:00,  3.61batch/s]
+
+	LR:  0.0001
+
+
+Test 65: 100%|██████████| 100/100 [00:02<00:00, 33.64batch/s]
+
+[Epoch 66] Train Loss: 0.006547 - Test Loss: 0.000250 - Train Accuracy: 77.34% - Test Accuracy: 99.12%
+
+Epoch 66: 100%|██████████| 600/600 [02:44<00:00,  3.65batch/s]
+
+	LR:  0.0001
+
+
+Test 66: 100%|██████████| 100/100 [00:02<00:00, 44.32batch/s]
+
+[Epoch 67] Train Loss: 0.006538 - Test Loss: 0.000248 - Train Accuracy: 77.37% - Test Accuracy: 99.16%
+
+Epoch 67: 100%|██████████| 600/600 [02:44<00:00,  3.66batch/s]
+
+	LR:  0.0001
+
+
+Test 67: 100%|██████████| 100/100 [00:02<00:00, 34.80batch/s]
+
+[Epoch 68] Train Loss: 0.006539 - Test Loss: 0.000256 - Train Accuracy: 77.32% - Test Accuracy: 99.11%
+
+Epoch 68: 100%|██████████| 600/600 [02:42<00:00,  3.69batch/s]
+
+	LR:  0.0001
+
+
+Test 68: 100%|██████████| 100/100 [00:02<00:00, 44.32batch/s]
+
+[Epoch 69] Train Loss: 0.006495 - Test Loss: 0.000254 - Train Accuracy: 77.57% - Test Accuracy: 99.09%
+
+Epoch 69: 100%|██████████| 600/600 [02:41<00:00,  3.72batch/s]
+
+	LR:  0.0001
+
+
+Test 69: 100%|██████████| 100/100 [00:02<00:00, 44.61batch/s]
+
+[Epoch 70] Train Loss: 0.006413 - Test Loss: 0.000242 - Train Accuracy: 77.71% - Test Accuracy: 99.12%
+
+Epoch 70: 100%|██████████| 600/600 [02:40<00:00,  3.73batch/s]
+
+	LR:  0.0001
+
+
+Test 70: 100%|██████████| 100/100 [00:02<00:00, 37.44batch/s]
+
+[Epoch 71] Train Loss: 0.006522 - Test Loss: 0.000246 - Train Accuracy: 77.29% - Test Accuracy: 99.13%
+
+Epoch 71: 100%|██████████| 600/600 [02:40<00:00,  3.73batch/s]
+
+	LR:  0.0001
+
+
+Test 71: 100%|██████████| 100/100 [00:02<00:00, 39.28batch/s]
+
+[Epoch 72] Train Loss: 0.006425 - Test Loss: 0.000249 - Train Accuracy: 77.78% - Test Accuracy: 99.15%
+
+Epoch 72: 100%|██████████| 600/600 [02:40<00:00,  3.73batch/s]
+
+	LR:  0.0001
+
+
+Test 72: 100%|██████████| 100/100 [00:02<00:00, 45.26batch/s]
+
+[Epoch 73] Train Loss: 0.006466 - Test Loss: 0.000257 - Train Accuracy: 77.64% - Test Accuracy: 99.11%
+
+Epoch 73: 100%|██████████| 600/600 [02:42<00:00,  3.68batch/s]
+
+	LR:  0.0001
+
+
+Test 73: 100%|██████████| 100/100 [00:02<00:00, 41.25batch/s]
+
+[Epoch 74] Train Loss: 0.006488 - Test Loss: 0.000254 - Train Accuracy: 77.53% - Test Accuracy: 99.13%
+
+Epoch 74: 100%|██████████| 600/600 [02:37<00:00,  3.82batch/s]
+
+	LR:  0.0001
+
+
+Test 74: 100%|██████████| 100/100 [00:02<00:00, 45.70batch/s]
+
+[Epoch 75] Train Loss: 0.006499 - Test Loss: 0.000247 - Train Accuracy: 77.44% - Test Accuracy: 99.12%
+
+BEST TEST ACCURACY:  99.17  in epoch  63
+
+
+Test 74: 100%|██████████| 100/100 [00:02<00:00, 45.34batch/s]
+
+Final best acc:  99.17

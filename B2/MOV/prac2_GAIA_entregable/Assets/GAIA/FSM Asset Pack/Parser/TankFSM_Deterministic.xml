@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<FSM_Machine>
+	<FSMtype Probabilistic="NO">CLASSIC</FSMtype>
+	<FSMid>TankAIDeterministic</FSMid>
+	<Fsm>
+		<Callback>BuscarEventos</Callback>
+		<States>
+      <State Initial="YES">
+				<S_Name>MOVIENDO</S_Name>
+				<S_Action>MOVERSE</S_Action>
+				<S_inAction>MOVERSE</S_inAction>
+				<S_outAction>DISPARAR</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+      <State Initial="NO">
+				<S_Name>DISPARANDO</S_Name>
+				<S_Action>DISPARAR</S_Action>
+				<S_inAction>NULL</S_inAction>
+				<S_outAction>NULL</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+			<State Initial="NO">
+				<S_Name>APARTANDO</S_Name>
+				<S_Action>APARTAR</S_Action>
+				<S_inAction>NULL</S_inAction>
+				<S_outAction>NULL</S_outAction>
+				<S_Fsm></S_Fsm>
+			</State>
+		</States>
+		
+		<Transitions> 
+			<Transition>
+				<T_Name>MOVIENDO_A_DISPARANDO</T_Name>
+				<T_Origin>MOVIENDO</T_Origin>
+				<T_Destination>DISPARANDO</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>DISTANCIA_OK</ID> 
+						<Type>BASIC</Type>
+					</Event>
+				</Events>	
+			</Transition>
+      <Transition>
+				<T_Name>DISPARANDO_A_MOVIENDO</T_Name>
+				<T_Origin>DISPARANDO</T_Origin>
+				<T_Destination>MOVIENDO</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>DISTANCIA_NO_OK</ID> 
+						<Type>BASIC</Type>
+					</Event>
+				</Events>	
+			</Transition>
+      <Transition>
+				<T_Name>MOVIENDO_A_APARTANDO</T_Name>
+				<T_Origin>MOVIENDO</T_Origin>
+				<T_Destination>APARTANDO</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>DEMASIADO_CERCA</ID> 
+						<Type>BASIC</Type>
+					</Event>
+				</Events>	
+			</Transition>
+      <Transition>
+				<T_Name>DISPARANDO_A_APARTANDO</T_Name>
+				<T_Origin>DISPARANDO</T_Origin>
+				<T_Destination>APARTANDO</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>DEMASIADO_CERCA</ID> 
+						<Type>BASIC</Type>
+					</Event>
+				</Events>	
+			</Transition>
+			<Transition>
+				<T_Name>APARTANDO_A_DISPARANDO</T_Name>
+				<T_Origin>APARTANDO</T_Origin>
+				<T_Destination>DISPARANDO</T_Destination>
+				<T_Action>NULL</T_Action>
+				<Events>
+					<Event>
+						<ID>DISTANCIA_OK</ID> 
+						<Type>BASIC</Type>
+					</Event>
+				</Events>	
+			</Transition>
+		</Transitions>
+	</Fsm>
+</FSM_Machine>
